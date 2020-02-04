@@ -27,7 +27,8 @@ const company = {
         companyArr.push(companyObj)
       }
       browser.close()
-      companyArr.sort((a, b) => {
+      // If you want to sort alphabetically
+      /*companyArr.sort((a, b) => {
         if (a.text === b.text) {
           return 0
         }
@@ -35,7 +36,7 @@ const company = {
           return -1
         }
         return 1
-      })
+      })*/
 
       companyArr.sort((a, b) => {
         return a.text.length - b.text.length
