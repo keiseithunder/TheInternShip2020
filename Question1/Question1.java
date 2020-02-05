@@ -35,33 +35,22 @@ public class Question1 {
 
             }
         }
-//        sc.close();
-//        ArrayList<String[]> list = new ArrayList<>();
-//        for (Map.Entry<String, Integer> entry : acronyms.entrySet()) {
-//            if (list.size() < entry.getKey().length()) {
-//                for (int i = list.size(); i < entry.getKey().length(); i++) {
-//                    list.add(new String[n]);
-//                }
-//            }
-//            for (int i = 0; i < entry.getValue(); i++) {
-//                addToArray(entry.getKey(), list.get(entry.getKey().length() - 1));
-//            }
-//        }
-        Arrays.sort(acronyms);
-        Arrays.sort(acronyms, (s1, s2) -> s2.length() - s1.length());
+        sc.close();
+        
+        Arrays.sort(acronyms, (s1, s2) -> {
+            if (s2.length() - s1.length() == 0) {
+                return s1.compareTo(s2);
+            }
+            return s2.length() - s1.length();
+
+
+        });
         for (String s : acronyms
         ) {
             if (!s.equals("  ")) {
                 System.out.println(s);
             }
         }
-//        for (int i = list.size()-1; i >=0; i--) {
-//            for (int j = 0; j < list.get(i).length; j++) {
-//                if (list.get(i)[j] != null) {
-//                    System.out.println(list.get(i)[j]+" ");
-//                }
-//            }
-//        }
     }
 
 }
