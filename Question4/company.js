@@ -4,7 +4,7 @@ const THE_INTERNSHIP_URL = 'https://theinternship.io/'
 const company = {
   async getData() {
     const companyArr = []
-    const browser = await puppeteer.launch({ headless: false })
+    const browser = await puppeteer.launch({ headless: true })
     const page = await browser.newPage()
     await page.goto(THE_INTERNSHIP_URL)
 
